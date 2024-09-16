@@ -1,6 +1,6 @@
-# Summary Statistics Report
+# Summary Statistics Report (Entire Dataset)
 
-## Summary Statistics for Total Medals
+## Summary Statistics for Total Medals (All Countries)
 |       |    Total |
 |:------|---------:|
 | count |  92      |
@@ -18,5 +18,5 @@
 5.0
 ## Standard Deviation of Total Medals: 
 19.610648135790445
-## Data Visualization
-![Total Medals by Country](total_medals_by_country.png)
+## Data Visualization for Top 50 Countries
+![Total Medals by Top 50 Countries](total_medals_by_top_50_countries.png)
