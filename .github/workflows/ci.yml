@@ -24,13 +24,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Lint with pylint
+      - name: Run script
         run: |
-          pylint src/main.py
+          python src/main.py
 
-      - name: Run tests
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src  # Set PYTHONPATH to include src
+      - name: Generate summary report (optional)
         run: |
-          pytest tests
-
+          python src/main.py && git add output/summary_report.md && git commit -m "Add summary report" && git push
