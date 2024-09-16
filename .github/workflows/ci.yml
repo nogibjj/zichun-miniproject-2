@@ -28,6 +28,11 @@ jobs:
         run: |
           python src/main.py
 
-      - name: Generate summary report (optional)
+      - name: Configure Git user identity
+        run: |
+          git config --global user.email "zichunwang733@gmail.com"
+          git config --global user.name "chun77"
+
+      - name: Generate summary report
         run: |
           python src/main.py && git add output/summary_report.md && git commit -m "Add summary report" && git push
