@@ -36,7 +36,10 @@ jobs:
       - name: Generate summary report and commit
         run: |
           python src/main.py
-          git add output/summary_report.md
-          git add output/total_medals_by_top_50_countries.png
-          git commit -m "Add summary report and data visualization for top 50 countries"
-          git push
+          git add output/summary_report.md output/total_medals_by_top_50_countries.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Add summary report for all countries and data visualization for top 50 countries"
+            git push
+          else
+            echo "No changes to commit"
+          fi
