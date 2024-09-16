@@ -37,6 +37,6 @@ jobs:
         run: |
           python src/main.py
           git add output/summary_report.md
-          git add output/total_medals_by_country.png
-          git commit -m "Add summary report and data visualization"
+          git add output/total_medals_by_top_50_countries.png
+          git commit -m "Add summary report and data visualization for top 50 countries"
           git push
