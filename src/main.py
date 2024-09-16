@@ -12,6 +12,8 @@ mean_total = data['Total'].mean()
 median_total = data['Total'].median()
 std_total = data['Total'].std()
 
+matplotlib.use('Agg')
+
 # Create a bar chart for total medals by country
 plt.figure(figsize=(10, 6))
 plt.bar(data['country'], data['Total'], color='skyblue')
@@ -21,6 +23,8 @@ plt.ylabel('Total Medals')
 plt.xticks(rotation=90)
 plt.tight_layout()
 plt.savefig('output/total_medals_by_country.png')
+
+plt.close()
 
 # Save summary statistics to markdown file
 with open('output/summary_report.md', 'w') as f:
